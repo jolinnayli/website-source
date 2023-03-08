@@ -140,6 +140,7 @@ nav { display: flex; flex-direction: column }
 
 nav summary
 	{ list-style: none
+	; list-style-type: none
 	; user-select: none
 	}
 
