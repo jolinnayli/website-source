@@ -67,10 +67,15 @@ Class project shot on film. Night at the jazz club gone wrong.
 Two troubled teenagers decide to steal some baking equipment, but one of them gets a chance of redemption and must confront her past.
 
 ## Flaming Fists
-test change
+!md: Digital
+!yt: yM_cSYCT64k
+Torn between her love for taekwondo and familial expectations, Amy squares up for a regional sparring championship to face her biggest opponent yet. 
 
 ## The Redemption of Mr. Greg
-hi2
+!md: Digital
+!yt: nDNND5ocIZg
+An old bitter soul has a magical encounter that pushes him to reconnect with his daughter.
+
 
 # Experimental
 
