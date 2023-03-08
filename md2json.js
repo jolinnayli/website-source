@@ -39,19 +39,12 @@ for (const line of doc.split('\n')) {
 		cats.push({ title, pages: [] })
 	} else if (match = line.match(/^!md:(.+)/)) {
 		const med = match[1].trim()
-		const myb = cats.last().pages.last().medium ??= med
+		cats.last().pages.last().medium ??= med
+	} else if (match = line.match(/^!yt:(.+)/)) {
+		const code = match[1].trim()
+		cats.last().pages.last().youtube ??= code
 	} else {
-		const curr_page = cats.last().pages.last()
-		let processed = line
-		if (match = line.match(/^!yt:(.+)/)) {
-			const code = match[1].trim()
-			const yt_title = curr_page
-				? `YouTube video player for ${curr_page.title}`
-				: `Youtube video player`
-			console.error(code, yt_title)
-			processed = `\n<iframe class=film-yt src="https://www.youtube.com/embed/${code}" title="${yt_title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>\n`
-		}
-		cats.last().pages.last()?.lines.push(processed)
+		cats.last().pages.last()?.lines.push(line)
 	}
 }
 
@@ -70,7 +63,7 @@ const short2stills = short => [...expandGlobSync(`out/media/${short}/*.jpg`)]
 
 const pages = await Promise.all(
 	[{ group: null, title: 'index', lines: home_md}, ...cats2.map(cat => cat.pages).flat()]
-	.map(async ({ group, title, lines, medium }) => {
+	.map(async ({ group, title, lines, medium, youtube }) => {
 
 		const short = title2short(title)
 		const heading = title === 'index'
@@ -79,12 +72,17 @@ const pages = await Promise.all(
 				? `<div class=film-intro><h2 class=title>${title}</h2><div class=film-medium>${medium}</div></div>`
 				: `<div><h2>${title}</h2></div>`
 
+		const yt = youtube
+			? `<iframe class=film-yt src="https://www.youtube.com/embed/${youtube}?modestbranding=1" title="YouTube player for ${title}" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+			: ''
+		console.error(youtube, title)
+
 		const ss = short2stills(short)
 
 		const stills = ss.length === 0
 			? ''
 			: `<div class=empty></div>${ss.map((f, i) => `<img class=still src='media/${short}/${f.name}'>`).join('')}`
-		return { group, title, short, content: await pandoc_markdown(heading + '\n\n' + lines) + stills }
+		return { group, title, short, content: await pandoc_markdown(`${heading}\n\n${lines}\n\n${yt}`) + stills }
 	})
 )
 

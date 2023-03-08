@@ -22,10 +22,10 @@ DETAILS.forEach((d, i) => {
 // dynamically display page content from short code
 const display = short =>
 	json.then(j => {
+		document.title = j[short].title
 		CONTENT.innerHTML = j[short].content
 		document.querySelectorAll('.current-page').forEach(e => e.classList.remove('current-page'))
 		NAVAS.find(a => a.getAttribute('short') === short).classList.add('current-page') // css selector ok?
-		console.log(j[short].group)
 		DETAILS.forEach(d => d.open = d.getAttribute('group') === j[short].group)
 	})
 
