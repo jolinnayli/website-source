@@ -1,0 +1,104 @@
+{
+	"index": {
+		"group": null,
+		"title": "index",
+		"short": "index",
+		"content": "<iframe height=\"200\" src=\"https://www.youtube.com/embed/-gLEizxGh_A\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen>\n</iframe>\n<p>hi website!! :)</p>\n<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n<p>\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n</p>\n<p>\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n</p>\n<p>\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n</p>\n<p>\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n</p>\n"
+	},
+	"eyes-on-me": {
+		"group": "Narrative",
+		"title": "Eyes On Me",
+		"short": "eyes-on-me",
+		"content": "\n"
+	},
+	"me-and-my-babysitter": {
+		"group": "Narrative",
+		"title": "Me and My Babysitter",
+		"short": "me-and-my-babysitter",
+		"content": "\n"
+	},
+	"finding-eden": {
+		"group": "Narrative",
+		"title": "Finding Eden",
+		"short": "finding-eden",
+		"content": "\n"
+	},
+	"col-and-olga": {
+		"group": "Narrative",
+		"title": "Col and Olga",
+		"short": "col-and-olga",
+		"content": "<p>a touching story about tooth brushes</p>\n"
+	},
+	"barbies-bitch-bites-back": {
+		"group": "Narrative",
+		"title": "Barbie’s Bitch Bites Back",
+		"short": "barbies-bitch-bites-back",
+		"content": "\n"
+	},
+	"good-goods": {
+		"group": "Narrative",
+		"title": "Good Goods",
+		"short": "good-goods",
+		"content": "\n"
+	},
+	"flaming-fists": {
+		"group": "Narrative",
+		"title": "Flaming Fists",
+		"short": "flaming-fists",
+		"content": "<p>flame</p>\n"
+	},
+	"the-redemption-of-mr-greg": {
+		"group": "Narrative",
+		"title": "The Redemption of Mr. Greg",
+		"short": "the-redemption-of-mr-greg",
+		"content": "\n"
+	},
+	"111-film": {
+		"group": "Experimental",
+		"title": "1:11 film",
+		"short": "111-film",
+		"content": "\n"
+	},
+	"growing-and-leaving": {
+		"group": "Experimental",
+		"title": "Growing and leaving",
+		"short": "growing-and-leaving",
+		"content": "\n"
+	},
+	"brunch": {
+		"group": "Experimental",
+		"title": "Brunch",
+		"short": "brunch",
+		"content": "<p>content for bruch</p>\n<p>more content for brucnh</p>\n<hr />\n<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n"
+	},
+	"kettle-boils-while-watched": {
+		"group": "Experimental",
+		"title": "Kettle Boils While Watched",
+		"short": "kettle-boils-while-watched",
+		"content": "<iframe height=\"200\" src=\"https://www.youtube.com/embed/-gLEizxGh_A\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen>\n</iframe>\n"
+	},
+	"haiku-film": {
+		"group": "Experimental",
+		"title": "Haiku Film",
+		"short": "haiku-film",
+		"content": "\n"
+	},
+	"anaphylaxis": {
+		"group": "Writing",
+		"title": "Anaphylaxis",
+		"short": "anaphylaxis",
+		"content": "\n"
+	},
+	"hello-world": {
+		"group": "Writing",
+		"title": "hello world",
+		"short": "hello-world",
+		"content": "\n"
+	},
+	"about": {
+		"group": "About",
+		"title": "about",
+		"short": "about",
+		"content": "<p>hello world</p>\n"
+	}
+}

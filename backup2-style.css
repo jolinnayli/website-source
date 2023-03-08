@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.6;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** hello **/
+
+@font-face {
+	font-family: myfont1;
+	src: url(EBGaramond-VariableFont_wght.ttf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: myfont1;
+	font-style: italic;
+	src: url(EBGaramond-Italic-VariableFont_wght.ttf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: modern-font-haha;
+	src: url(RobotoMono-VariableFont_wght.ttf);
+	font-display: swap;
+}
+
+@font-face {
+	font-family: modern-font-haha;
+	font-style: italic;
+	src: url(RobotoMono-Italic-VariableFont_wght.ttf);
+	font-display: swap;
+}
+
+:root
+	{ --main-text-color: white
+	; --idk-color: #f58ea9
+	; --main-bg-color: black
+	; font-family: 'myfont1', serif
+	; font-variation-settings: "wght" 450
+	}
+
+html { background-color: var(--main-bg-color); color: var(--main-text-color) }
+
+img { max-width: 100% }
+
+body
+	{ margin: 1rem
+	; display: grid
+	; grid-template-rows: max-content 1fr
+	; gap: 2rem
+	}
+
+h1 { font-size: 2.2rem; font-weight: bold; font-variation-settings: "wght" 500 }
+
+#name { color: var(--idk-color) }
+
+nav .title
+	{ font-family: modern-font-haha, monospace
+	; font-variation-settings: "wght" 320
+	; font-size: 0.9rem
+	; margin-left: 0.5rem
+	}
+
+.film-medium { font-family: modern-font-haha, monospace; font-style: italic }
+
+h2.title { font-family: modern-font-haha, monospace }
+
+h2 { font-size: 2rem; font-variation-settings: "wght" 550 }
+
+p { text-align: justify }
+
+a
+	{ text-decoration: none
+	; color: var(--main-text-color)
+	}
+
+a:hover, a.current-page
+	{ font-weight: bold
+	; font-variation-settings: "wght" 700
+	}
+
+#about-pictures { display: grid; grid-template-columns: 1fr 1fr }
+
+h1 { position: relative }
+
+.film-yt { width: 100%; aspect-ratio: 16/9 }
+
+#content { display: grid; gap: 0.8rem; grid-auto-rows: max-content }
+
+hr { width: 100%; border: none; height: 1px; background-color: var(--main-text-color); opacity: 0.8 }
+
+.still { padding: 0 1.6rem 0 1.6rem; box-sizing: border-box }
+.thumb { display: none }
+
+nav { font-size: 1.6rem }
+nav { display: flex; flex-direction: column }
+
+nav summary
+	{ list-style: none
+	; user-select: none
+	}
+
+nav summary:hover, nav details[open] summary { font-style: italic }
+
+nav details
+	{ display: flex
+	; flex-direction: column
+	}
+
+nav details a
+	{ width: max-content
+	}
+
+/* desktop */
+@media (min-width: 44rem) {
+	/* body { background-color: #aea } */
+	body
+		{ grid-template-columns: 15rem 1fr
+		; width: 60rem
+		; margin: 2rem
+		}
+	html { display: flex; justify-content: center }
+}
+
+/* 2-column stills */
+@media (min-width: 56rem) {
+	/*.stills { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0 -2rem 0 -2rem }*/
+	body { margin: 3rem; gap: 12% }
+	#content { grid-template-columns: 2rem 1fr 1fr 2rem }
+	#content p, #content div { grid-column: 2/4 }
+	.film-yt { grid-column: 2/4 }
+
+	hr { grid-column: 2/4 }
+
+	.still { padding: 0; grid-column: span 2; grid-row-end: span 2 }
+	.still.second { grid-row-end: span 3; align-self: end }
+}
+
+/* thumbnails */
+@media (min-width: 70rem) {
+	nav a { position: relative }
+	.thumb
+		{ display: block
+		; max-width: 10rem
+		; max-height: none
+		; position: absolute
+		; left: -11.2rem
+		; top: 50%
+		; transform: translateY(-50%);
+		; visibility: visible
+		; opacity: 0
+		; pointer-events: none
+		; transition: opacity 0.1s ease-in-out;
+		}
+
+	nav a:hover > .thumb { visibility: visible; opacity: 0.9; transition: opacity 0.1s ease-in-out; }
+	nav .current-page:hover .thumb { opacity: 0 }
+}
