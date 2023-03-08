@@ -121,6 +121,7 @@ a
 a:hover, a.current-page
 	{ font-weight: bold
 	; font-variation-settings: "wght" 700
+	; color: var(--idk-color)
 	}
 
 #about-pictures { display: grid; grid-template-columns: 1fr 1fr }

@@ -82,15 +82,15 @@ const pages = await Promise.all(
 		const stills = ss.length === 0
 			? ''
 			: `<div class=empty></div>${ss.map((f, i) => `<img class=still src='media/${short}/${f.name}'>`).join('')}`
-		return { group, title, short, content: await pandoc_markdown(`${heading}\n\n${lines}\n\n${yt}`) + stills }
+		return { group, title, medium, short, content: await pandoc_markdown(`${heading}\n\n${lines}\n\n${yt}`) + stills }
 	})
 )
 
 const out = {}
 
-for (const { group, title, short, content } of pages) {
+for (const { group, title, short, content, medium } of pages) {
 	if (out[short]) throw 'ununique short title: ' + short
-	out[short] = {group, title, short, content} // short is redundant but whatever bestie
+	out[short] = {group, title, short, content, medium } // short is redundant but whatever bestie
 }
 
 console.log(JSON.stringify(out, null, '\t'))

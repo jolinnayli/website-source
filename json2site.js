@@ -53,7 +53,12 @@ const navstuff = curr => navs.map(g => {
 	return `<details group='${g}' class=nav-category${g === curr.group ? ' open' : ''}>
 		<summary>${g}</summary>
 		${json.vals().filter(({group}) => g === group)
-			.map(({ title, short }) => `<a short='${short}' class='${curr.short === short ? 'current-page ' : ''}title' href='${short2path(short)}'><img class=thumb src='media/${short}/01.jpg'>${title}</a>`)
+			.map(({ title, short, medium }) => {
+				const thumb = medium
+					? `<img class=thumb src='media/${short}/01.jpg'>`
+					: ''
+				return `<a short='${short}' class='${curr.short === short ? 'current-page ' : ''}title' href='${short2path(short)}'>${thumb}${title}</a>`
+			})
 			.join('')}
 	</details>`
 }).join('')
